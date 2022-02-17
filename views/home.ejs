@@ -1,0 +1,53 @@
+<h1>Welocme to Spigit and Salesforce interface</h1>
+
+<p>Response Token: </p> <%= response.accessToken %>
+
+<p>Idea List</p> 
+
+<% response.ideaList.final.forEach(function (element){ %> 
+    <div class="row">
+        <div class="col">
+          <%=  element.id %>
+        </div>
+        <div class="col">
+            <%=  element.title %>
+        </div>
+        <div class="col">
+            <%=  element.content %>
+        </div>
+        <div class="col">
+            <%=  element.creatorDisplayName%>
+        </div>
+        <div class="col">
+            <%=  element.totatVotes%>
+        </div>
+        <div class="col">
+            <%=  element.createdDate%>
+        </div>
+        <div class="col">
+            <%=  element.url%>
+        </div>
+        <div class="col">
+            <%=  element.category%>
+        </div>
+        <div class="col">
+            <%=  element.stage%>
+        </div>
+        <div class="col">
+            <%=  element.comments%>
+        </div>
+    </div>
+     
+<% }) %> 
+
+<style>
+    .row{
+        display: flex; 
+        gap: 5px; 
+        overflow-x: auto;
+    }
+    .col{
+        border: 1px solid rgb(202, 202, 202); 
+        padding:10px; 
+    }
+</style>
